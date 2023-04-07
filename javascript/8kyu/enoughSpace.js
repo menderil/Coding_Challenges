@@ -9,14 +9,6 @@
 
 // If there is enough space, return 0, and if there isn't, return the number of passengers he can't take.
 
-// p get passed cap -- max on bus, on -- # on bus, wait -- # wanting to get on
-// r return 0 if enough space, otherwise return # of passengers over the cap
-// e cap = 10, on = 5, wait = 5 --> 0 # He can fit all 5 passengers
-//   cap = 100, on = 60, wait = 50 --> 10 # He can't fit 10 of the 50 waiting
-// p  cap - on = remainingSpace
-//    if remainingSpace > wait return 0
-//    otherwise return wait - remainingSpace
-
 function enough(cap, on, wait) {
     let remainingSpace = cap - on;
     return (wait > remainingSpace) ? (wait - remainingSpace) : 0;
